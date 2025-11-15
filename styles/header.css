@@ -1,0 +1,235 @@
+/* Import Italiana Font */
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
+/* Color Variables */
+:root {
+  --deep-blue: #001a4d;
+  --light-blue: #0033cc;
+  --white: #ffffff;
+  --text-dark: #001a4d;
+  --bg-light: #f5f7fa;
+}
+
+/* Header Styles */
+.header {
+  background: linear-gradient(135deg, var(--deep-blue) 0%, var(--light-blue) 100%);
+  padding: 1.5rem 0;
+  box-shadow: 0 2px 10px rgba(0, 26, 77, 0.2);
+  font-family: 'Italiana', serif;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Logo Section */
+.logo-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.logo {
+  font-family: 'Italiana', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.tagline {
+  font-family: 'Italiana', serif;
+  font-size: 1rem;
+  color: var(--white);
+  margin: 0.5rem 0 0 0;
+  opacity: 0.95;
+  letter-spacing: 1px;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  flex: 1;
+  min-width: 300px;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  font-family: 'Italiana', serif;
+  font-size: 1.1rem;
+  color: var(--white);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+  color: var(--bg-light);
+  transform: translateY(-2px);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--white);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Header Actions */
+.header-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Buttons */
+.btn {
+  font-family: 'Italiana', serif;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: var(--white);
+  color: var(--deep-blue);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: var(--bg-light);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.btn-secondary:hover {
+  background-color: var(--white);
+  color: var(--deep-blue);
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .nav-list {
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 0;
+  }
+
+  .logo {
+    font-size: 1.75rem;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .nav-list {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 0.5rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .tagline {
+    font-size: 0.8rem;
+  }
+
+  .nav-list {
+    gap: 0.75rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  .header-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

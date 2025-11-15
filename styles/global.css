@@ -1,0 +1,49 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --deep-blue: #001a4d;
+  --light-blue: #0033cc;
+  --white: #ffffff;
+  --text-dark: #001a4d;
+  --bg-light: #f5f7fa;
+  --font-italiana: 'Italiana', serif;
+}
+
+html, body {
+  font-family: var(--font-italiana);
+  color: var(--text-dark);
+  background-color: var(--white);
+}
+
+body {
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-italiana);
+  color: var(--deep-blue);
+}
+
+p, a, li {
+  font-family: var(--font-italiana);
+}
+
+main {
+  min-height: calc(100vh - 100px);
+}
+
+footer {
+  background-color: var(--deep-blue);
+  color: var(--white);
+  padding: 2rem;
+  text-align: center;
+  font-family: var(--font-italiana);
+  margin-top: 2rem;
+}

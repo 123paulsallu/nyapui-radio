@@ -11,9 +11,41 @@
       </div>
     </div>
 
-    <div class="header-actions">
-      <button class="btn btn-primary">Quick Start</button>
-      <button class="btn btn-secondary">Sign In</button>
+    <!-- Navigation (desktop + mobile) -->
+    <!-- include components/navbar.html here or keep markup inline -->
+    <div class="nav-wrapper">
+      <ul class="nav-list desktop-nav">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#stations" class="nav-link">Stations</a></li>
+        <li><a href="#schedule" class="nav-link">Schedule</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <button class="btn btn-primary">Quick Start</button>
+        <button class="btn btn-secondary">Sign In</button>
+      </div>
+
+      <!-- Mobile hamburger: visible on small screens -->
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+      </button>
+
+      <!-- mobile off-canvas placeholder (toggled by JS) -->
+      <div id="mobile-menu" class="mobile-menu" hidden>
+        <div class="mobile-menu-inner">
+          <button class="mobile-close" aria-label="Close menu">✕</button>
+          <ul class="nav-list mobile-nav">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#stations" class="nav-link">Stations</a></li>
+            <li><a href="#schedule" class="nav-link">Schedule</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="mobile-menu-backdrop" data-close="true"></div>
+      </div>
     </div>
   </div>
 </header>

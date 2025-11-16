@@ -31,7 +31,9 @@ $adminRole = $_SESSION['admin_role'] ?? 'Role';
       <nav class="sidebar-nav">
         <ul class="sidebar-nav-list">
           <li><a href="#user-management" class="sidebar-nav-link">User Management</a></li>
+          <?php if ($adminRole === 'admin'): ?>
           <li><a href="#web-management" class="sidebar-nav-link">Web Management</a></li>
+          <?php endif; ?>
           <li><a href="#programs" class="sidebar-nav-link">Programs</a></li>
           <li><a href="#news" class="sidebar-nav-link">News</a></li>
           <li><a href="#notifications" class="sidebar-nav-link">Notifications</a></li>

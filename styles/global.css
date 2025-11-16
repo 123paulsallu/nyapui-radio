@@ -47,3 +47,62 @@ footer {
   font-family: var(--font-italiana);
   margin-top: 2rem;
 }
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background: var(--deep-blue);
+    color: var(--white);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-logo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.sidebar-logo-img {
+    max-width: 100px;
+    margin-bottom: 1rem;
+}
+
+.sidebar-logo-text {
+    font-family: 'Italiana', serif;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.sidebar-nav {
+    width: 100%;
+}
+
+.sidebar-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sidebar-nav-link {
+    font-family: 'Italiana', serif;
+    font-size: 1rem;
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.sidebar-nav-link:hover {
+    background: var(--light-blue);
+}

@@ -13,13 +13,13 @@
 
 /* Header Styles */
 .header {
-  background: linear-gradient(180deg, var(--deep-blue) 0%, #002252 100%);
-  padding: 1rem 0;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  background: var(--white); /* Changed background to white */
+  padding: 1.5rem 0;
+  box-shadow: 0 2px 10px rgba(0, 26, 77, 0.2);
   font-family: 'Italiana', serif;
-  color: var(--deep-orange);
 }
 
+/* Header Container */
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -53,7 +53,7 @@
 .tagline {
   font-family: 'Italiana', serif;
   font-size: 0.9rem;
-  color: rgba(255,255,255,0.85);
+  color: var(--deep-orange);
   margin: 0.25rem 0 0 0;
   letter-spacing: 0.8px;
 }

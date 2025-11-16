@@ -30,7 +30,15 @@ $adminRole = $_SESSION['admin_role'] ?? 'Role';
       <nav class="sidebar-nav">
         <ul class="sidebar-nav-list">
           <li><a href="#user-management" class="sidebar-nav-link">User Management</a></li>
-          <li><a href="#web-management" class="sidebar-nav-link">Web Management</a></li>
+          <li class="has-submenu">
+            <button class="sidebar-nav-link submenu-toggle" type="button">Web Management <span class="chev">▾</span></button>
+            <ul class="submenu">
+              <li><a href="../../backend/header.php" class="sidebar-nav-link">Header</a></li>
+              <li><a href="#web-pages" class="sidebar-nav-link">Pages</a></li>
+              <li><a href="#web-footer" class="sidebar-nav-link">Footer</a></li>
+              <li><a href="#web-menus" class="sidebar-nav-link">Menus</a></li>
+            </ul>
+          </li>
           <li><a href="#programs" class="sidebar-nav-link">Programs</a></li>
           <li><a href="#news" class="sidebar-nav-link">News</a></li>
           <li><a href="#notifications" class="sidebar-nav-link">Notifications</a></li>
@@ -57,5 +65,16 @@ $adminRole = $_SESSION['admin_role'] ?? 'Role';
       <footer class="admin-footer">NYAPUI Radio • Admin dashboard</footer>
     </div>
   </div>
+  <script>
+    // Sidebar submenu toggle
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.submenu-toggle').forEach(function(btn){
+        btn.addEventListener('click', function(){
+          var parent = btn.closest('.has-submenu');
+          parent.classList.toggle('open');
+        });
+      });
+    });
+  </script>
 </body>
 </html>

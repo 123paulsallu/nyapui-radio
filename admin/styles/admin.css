@@ -121,6 +121,53 @@
   width: 100%;
 }
 
+/* Submenu (Web Management) */
+.has-submenu {
+  position: relative;
+}
+
+.submenu-toggle {
+  background: transparent;
+  border: none;
+  color: inherit;
+  width: 100%;
+  text-align: left;
+  padding: 0.6rem 0.5rem;
+  font: inherit;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chev {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  transition: transform 0.2s ease;
+}
+
+.has-submenu .submenu {
+  list-style: none;
+  padding-left: 0.5rem;
+  margin: 0.25rem 0 0 0;
+  display: none;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.has-submenu.open .submenu {
+  display: flex;
+}
+
+.has-submenu.open .chev {
+  transform: rotate(180deg);
+}
+
+.submenu .sidebar-nav-link {
+  padding-left: 1rem;
+  font-size: 0.95rem;
+}
+
 .brand {
   display: flex;
   align-items: center;

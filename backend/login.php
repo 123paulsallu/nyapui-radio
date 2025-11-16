@@ -7,11 +7,18 @@ $username = "root";
 $password = "";
 $dbname = "nyapui";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+$conn = null;
+// Use exceptions for mysqli so we can handle connection errors gracefully
+mysqli_report(MYSQLI_REPORT_STRICT);
+try {
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    // ensure proper charset
+    $conn->set_charset('utf8mb4');
+} catch (mysqli_sql_exception $ex) {
+    // Log the detailed error to server logs but avoid exposing sensitive info to users
+    error_log('Database connection error: ' . $ex->getMessage());
+    // Give the user a helpful, non-sensitive message
+    die('Database connection failed. Please verify your DB host/user/password/name in Hostinger hPanel. Host used: ' . htmlspecialchars($servername));
 }
 
 // Handle login

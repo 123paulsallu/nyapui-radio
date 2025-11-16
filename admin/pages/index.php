@@ -12,6 +12,7 @@ $adminRole = $_SESSION['admin_role'] ?? 'Role';
   <title>NYAPUI Radio — Admin Dashboard</title>
   <link rel="stylesheet" href="../../styles/global.css">
   <link rel="stylesheet" href="../styles/admin.css">
+  <link rel="stylesheet" href="../styles/user-management.css">
 </head>
 <body>
   <div class="admin-root">
@@ -50,12 +51,63 @@ $adminRole = $_SESSION['admin_role'] ?? 'Role';
         </div>
       </header>
 
+
       <section class="admin-content">
-        <!-- Content sections will be added here -->
+        <!-- User Management Section -->
+        <div id="user-management" class="panel" style="display:none;">
+          <div class="panel-header">
+            <h3 class="panel-title">User Management</h3>
+            <button class="btn btn-primary" id="addUserBtn">Add User</button>
+          </div>
+          <table class="data-table" id="usersTable">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Role</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- User rows will be loaded here by JS -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Add/Edit User Modal -->
+        <div class="modal" id="userModal" hidden>
+          <div class="modal-content">
+            <h4 id="modalTitle">Add User</h4>
+            <form id="userForm">
+              <input type="hidden" name="id" id="userId">
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" required>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+              </div>
+              <div class="form-group">
+                <label for="role">Role</label>
+                <select name="role" id="role" required>
+                  <option value="admin">Admin</option>
+                  <option value="user">User</option>
+                </select>
+              </div>
+              <div class="modal-actions">
+                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-secondary" id="cancelModal">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- End User Management Section -->
       </section>
 
       <footer class="admin-footer">NYAPUI Radio • Admin dashboard</footer>
     </div>
   </div>
 </body>
+<script src="../../assets/js/user-management.js"></script>
 </html>

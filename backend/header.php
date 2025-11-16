@@ -226,11 +226,11 @@ if ($isAjax) {
       <nav class="sidebar-nav">
         <ul class="sidebar-nav-list">
           <li><a href="../admin/pages/index.php" class="sidebar-nav-link">Dashboard</a></li>
-          <li><a href="#user-management" class="sidebar-nav-link">User Management</a></li>
+          <li><a href="js/user-management.js" class="sidebar-nav-link">User Management</a></li>
           <li class="has-submenu open">
             <button class="sidebar-nav-link submenu-toggle" type="button">Web Management <span class="chev">▾</span></button>
             <ul class="submenu" style="display:flex;">
-              <li><a href="#" class="sidebar-nav-link" style="color:#FF8C00;">Header</a></li>
+              <li><a href="pages/header.php" class="sidebar-nav-link" style="color:#FF8C00;">Header</a></li>
               <li><a href="#web-pages" class="sidebar-nav-link">Pages</a></li>
               <li><a href="#web-footer" class="sidebar-nav-link">Footer</a></li>
               <li><a href="#web-menus" class="sidebar-nav-link">Menus</a></li>

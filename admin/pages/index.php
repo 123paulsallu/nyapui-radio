@@ -31,6 +31,7 @@ $adminRole = $_SESSION['admin_role'] ?? 'Role';
       <nav class="sidebar-nav">
         <ul class="sidebar-nav-list">
           <li><a href="#user-management" class="sidebar-nav-link">User Management</a></li>
+          <?php if (strtolower($adminRole) === 'admin' || strtolower($adminRole) === 'super admin'): ?>
           <li class="has-submenu">
             <button class="sidebar-nav-link submenu-toggle" type="button">Web Management <span class="chev">▾</span></button>
             <ul class="submenu">
@@ -40,6 +41,7 @@ $adminRole = $_SESSION['admin_role'] ?? 'Role';
               <li><a href="#web-menus" class="sidebar-nav-link">Menus</a></li>
             </ul>
           </li>
+          <?php endif; ?>
           <li><a href="#programs" class="sidebar-nav-link">Programs</a></li>
           <li><a href="#news" class="sidebar-nav-link">News</a></li>
           <li><a href="#notifications" class="sidebar-nav-link">Notifications</a></li>
